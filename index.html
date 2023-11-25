@@ -29,7 +29,7 @@
       }
 
       .marquee {
-        animation: bounce 2s infinite alternate;
+        animation: bounce 8s infinite alternate;
       }
 
       @keyframes bounce {
@@ -41,11 +41,57 @@
           transform: translateX(-100%);
         }
       }
+
+      .star {
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+        animation: twinkling 3s infinite;
+      }
+
+      @keyframes twinkling {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+
+      .snowflake {
+        position: absolute;
+        background-color: #fff;
+        height: 2px;
+        width: 2px;
+        animation: snowfall 5s linear infinite;
+      }
+
+      @keyframes snowfall {
+        0% {
+          transform: translateY(-100vh);
+        }
+        100% {
+          transform: translateY(100vh);
+        }
+      }
     </style>
   </head>
   <body>
     <div class="marquee-container">
       <marquee class="marquee" behavior="alternate">Coming Soon 👀</marquee>
+      <marquee class="marquee" behavior="alternate">hehhehhehe :)</marquee>
     </div>
+
+    <script>
+      function createSnowflake() {
+        const snowflake = document.createElement("div");
+        snowflake.classList.add("snowflake");
+        snowflake.style.left = `${Math.random() * 100}vw`;
+        document.body.appendChild(snowflake);
+      }
+
+      setInterval(createSnowflake, 100);
+    </script>
   </body>
 </html>
