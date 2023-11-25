@@ -4,6 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AKHI</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+    />
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        overflow: hidden;
+        background-color: #f0f0f0;
+      }
+
+      .marquee-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+
+      .marquee {
+        animation: bounce 2s infinite alternate;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="marquee-container">
+      <marquee class="marquee" behavior="alternate">Coming Soon</marquee>
+    </div>
+  </body>
 </html>
