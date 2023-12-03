@@ -1,97 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AKHI</title>
+    <meta name="description" content="I'm AKHI, a Junior Software Developer." />
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Sans:400,700"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <style>
-      body {
-        font-family: "Open Sans", sans-serif;
-        margin: 0;
-        overflow: hidden;
-        background-color: #000;
-        color: #fff;
-      }
-
-      .marquee-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        white-space: nowrap;
-        overflow: hidden;
-        box-sizing: border-box;
-        font-size: 14px;
-      }
-
-      .marquee {
-        animation: bounce 8s infinite alternate;
-      }
-
-      @keyframes bounce {
-        0%,
-        100% {
-          transform: translateX(0);
-        }
-        50% {
-          transform: translateX(-100%);
-        }
-      }
-
-      .star {
-        position: absolute;
-        background-color: #fff;
-        border-radius: 50%;
-        animation: twinkling 3s infinite;
-      }
-
-      @keyframes twinkling {
-        0%,
-        100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0.5;
-        }
-      }
-
-      .snowflake {
-        position: absolute;
-        background-color: #fff;
-        height: 2px;
-        width: 2px;
-        animation: snowfall 5s linear infinite;
-      }
-
-      @keyframes snowfall {
-        0% {
-          transform: translateY(-100vh);
-        }
-        100% {
-          transform: translateY(100vh);
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
-    <div class="marquee-container">
-      <marquee class="marquee" behavior="alternate">Coming Soon :)</marquee>
-      <marquee class="marquee" behavior="alternate">hehhehhehe :)</marquee>
+    <div class="main-container">
+      <div class="content">
+        <img class="profile-pic" src="./me.jpeg" />
+        <h2 class="name">AKHI</h2>
+        <p>Junior Software Developer</p>
+        <p>Mostly UI UX, Node, Python, Dart 📱 💻</p>
+        <div class="social">
+          <a href="https://www.linkedin.com/in    ">
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/akhi07rx">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://stackoverflow.com/">
+            <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:akhilakae07@gmail.com">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
     </div>
-
-    <script>
-      function createSnowflake() {
-        const snowflake = document.createElement("div");
-        snowflake.classList.add("snowflake");
-        snowflake.style.left = `${Math.random() * 100}vw`;
-        document.body.appendChild(snowflake);
-      }
-
-      setInterval(createSnowflake, 100);
-    </script>
   </body>
 </html>

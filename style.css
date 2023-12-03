@@ -1,0 +1,73 @@
+html,
+body,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+}
+
+.main-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "PT Sans", sans-serif;
+  text-align: center;
+}
+
+.name {
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.profile-pic {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.mac {
+  position: relative;
+  top: 5px;
+  width: 25px;
+}
+
+.social {
+  text-align: center;
+}
+
+.fa-linkedin-square {
+  font-size: 28px;
+  color: #0077b5;
+  margin-top: 15px;
+  margin-right: 5px;
+}
+
+.fa-github {
+  font-size: 28px;
+  color: #000;
+  margin-right: 5px;
+}
+
+.fa-stack-overflow {
+  font-size: 22px;
+  color: #f37b24;
+  position: relative;
+  top: -2px;
+}
+
+.fa-envelope {
+  margin-left: 6px;
+  font-size: 22px;
+  color: #000;
+  position: relative;
+  top: -2px;
+}
+
+a {
+  text-decoration: none;
+}
